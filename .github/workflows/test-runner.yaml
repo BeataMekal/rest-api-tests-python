@@ -2,9 +2,12 @@ name: Python Tests
 run-name: Rest API Python Tests
 
 on:
+  pull_request:
+    branch: main
   schedule:
     - cron: "*/2 * * * *"
-  push
+  push:
+    branch: main
 
 jobs:
   Run-Tests:
